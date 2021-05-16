@@ -15,12 +15,9 @@ db.once("open", () => console.log("Connected to database"));
 
 app.use(express.json());
 
+
 const locationsRouter = require("./routes/locations");
 app.use("/locations",locationsRouter);
-
-app.get("/", (req, res) => {
-  res.sendStatus(200);
-});
 
 app.listen(PORT, () => {
   console.log("Server running on port", PORT);

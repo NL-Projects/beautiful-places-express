@@ -1,0 +1,16 @@
+GET http://localhost:3000/locations
+
+###
+
+GET http://localhost:3000/locations/tajmahal
+
+###
+
+POST http://localhost:3000/locations
+Content-Type: application/json
+
+{
+    "name":"test",
+    "text":"text",
+    "imageURL":"some url"
+}
