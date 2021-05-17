@@ -2,7 +2,7 @@ GET http://localhost:3000/locations
 
 ###
 
-GET http://localhost:3000/locations/tajmahal
+GET http://localhost:3000/locations/60a2621cd80e912a2cd73a38
 
 ###
 
@@ -10,7 +10,21 @@ POST http://localhost:3000/locations
 Content-Type: application/json
 
 {
-    "name":"test",
+    "name":"test1",
     "text":"text",
     "imageURL":"some url"
 }
+
+###
+
+PATCH http://localhost:3000/locations/60a2621cd80e912a2cd73a38
+Content-Type: application/json
+
+{
+    "name":"test2",
+    "imageURL" : "newURL!"
+}
+
+###
+
+DELETE http://localhost:3000/locations/60a2621cd80e912a2cd73a38
