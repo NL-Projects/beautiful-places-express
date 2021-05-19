@@ -4,12 +4,9 @@ const locationSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  text: {
-    type: String,
-  },
-  imageURL: {
-    type: String,
-  },
+  country: String,
+  text: [String],
+  imageURL: [String],
 });
 
 module.exports = mongoose.model("Location", locationSchema);

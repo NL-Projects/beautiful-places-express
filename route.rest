@@ -10,21 +10,26 @@ POST http://localhost:3000/locations
 Content-Type: application/json
 
 {
-    "name":"test1",
+    "name":"test1235",
+    "country" : "sweden",
     "text":"text",
     "imageURL":"some url"
 }
 
 ###
 
-PATCH http://localhost:3000/locations/60a2621cd80e912a2cd73a38
+PATCH http://localhost:3000/locations/60a4d022d8f5c644b80cd6e5
 Content-Type: application/json
 
 {
     "name":"test2",
-    "imageURL" : "newURL!"
+    "imageURL" : ["img1","img2"]
 }
 
 ###
 
 DELETE http://localhost:3000/locations/60a2621cd80e912a2cd73a38
+
+###
+
+DELETE http://localhost:3000/locations

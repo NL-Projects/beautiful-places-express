@@ -19,6 +19,7 @@ router.get("/:id", getLocation, (req, res) => {
 router.post("/", async (req, res) => {
   const location = new Location({
     name: req.body.name,
+    country: req.body.country,
     text: req.body.text,
     imageURL: req.body.imageURL,
   });
@@ -37,6 +38,9 @@ router.patch("/:id", getLocation, async (req, res) => {
   if (req.body.text != null) {
     res.location.text = req.body.text;
   }
+  if (req.body.country != null) {
+    res.location.country = req.body.country;
+  }
   if (req.body.name != null) {
     res.location.imageURL = req.body.imageURL;
   }
@@ -52,6 +56,15 @@ router.delete("/:id", getLocation, async (req, res) => {
   try {
     await res.location.remove();
     res.json({ message: "Location removed" });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+// Delete all
+router.delete("/", async (req, res) => {
+  try {
+    await Location.deleteMany();
+    res.json({ message: "All locations removed" });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
