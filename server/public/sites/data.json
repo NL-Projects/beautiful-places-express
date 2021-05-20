@@ -1,0 +1,91 @@
+[
+    {
+        "name" : "Taj Mahal, Agra",
+        "country":"India",
+        "text":[
+        "Agra is a city on the banks of the Yamuna river in the Agra district of the Indian state of Uttar Pradesh. It is 206 kilometres (128 mi) south of the national capital New Delhi. Agra is the fourth-most populous city in Uttar Pradesh and 24th in India.",
+        "Sikandar Lodi was the first ruler of the Delhi Sultanate to move his capital from Delhi to Agra in 1504, and so he is regarded as being the founder of Agra. Sikandar Lodi's son, Ibrahim Lodi, was defeated at the Battle of Panipat in 1526 by Babur, which marked the beginning of Mughal Empire. In a brief interruption in Mughal rule between 1540 and 1556, Sher Shah Suri, established the short lived Sur Empire. Agra was the capital of the Mughal Empire from 1556 to 1648, under the Mughal Emperors Akbar, Jahangir and Shah Jahan, after which Shah Jahan shifted the capital to Delhi. The Mughal Empire saw the building of many monuments, especially Taj Mahal. The city was later taken by the Jats and then Marathas and later still fell to the British Raj.",
+        "Agra is a major tourist destination because of its many Mughal-era buildings, most notably the Taj Mahal, Agra Fort and Fatehpur Sikri, all of which are UNESCO World Heritage Sites. Agra is included on the Golden Triangle tourist circuit, along with Delhi and Jaipur; and the Uttar Pradesh Heritage Arc, a tourist circuit of Uttar Pradesh, along with Lucknow and Varanasi. Agra is in the Braj cultural region."
+        ],
+        "imageURL":[
+            "http://localhost:3000/images/ag5.jpg",
+            "http://localhost:3000/images/ag3.jpg",
+            "http://localhost:3000/images/ag2.jpg",
+            "http://localhost:3000/images/ag1.jpg",
+            "http://localhost:3000/images/ag6.jpg",
+            "http://localhost:3000/images/ag4.jpg"
+        ]
+    },
+    {
+        "name" : "Barcelona",
+        "country":"Spain",
+        "text":[
+            "Barcelona is a city on the coast of northeastern Spain. It is the capital and largest city of the autonomous community of Catalonia, as well as the second most populous municipality of Spain. With a population of 1.6 million within city limits, its urban area extends to numerous neighbouring municipalities within the Province of Barcelona and is home to around 4.8 million people, making it the fifth most populous urban area in the European Union after Paris, the Ruhr area, Madrid, and Milan. It is one of the largest metropolises on the Mediterranean Sea, located on the coast between the mouths of the rivers Llobregat and Besòs, and bounded to the west by the Serra de Collserola mountain range, the tallest peak of which is 512 metres (1,680 feet) high.",
+        "Founded as a Roman city, in the Middle Ages Barcelona became the capital of the County of Barcelona. After joining with the Kingdom of Aragon to form the confederation of the Crown of Aragon, Barcelona, which continued to be the capital of the Principality of Catalonia, became the most important city in the Crown of Aragon and the main economic and administrative centre of the Crown, only to be overtaken by Valencia, wrested from Arab domination by the Catalans, shortly before the dynastic union between the Crown of Castile and the Crown of Aragon in 1492. Barcelona has a rich cultural heritage and is today an important cultural centre and a major tourist destination. Particularly renowned are the architectural works of Antoni Gaudí and Lluís Domènech i Montaner, which have been designated UNESCO World Heritage Sites. The city is home to two of the most prestigious universities in Spain: the University of Barcelona and Pompeu Fabra University. The headquarters of the Union for the Mediterranean are located in Barcelona. The city is known for hosting the 1992 Summer Olympics as well as world-class conferences and expositions and also many international sport tournaments.",
+        "Barcelona is a major cultural, economic, and financial centre in southwestern Europe, as well as the main biotech hub in Spain. As a leading world city, Barcelona's influence in global socio-economic affairs qualifies it for global city status (Beta +).",
+        "Barcelona is a transport hub, with the Port of Barcelona being one of Europe's principal seaports and busiest European passenger port, an international airport, Barcelona–El Prat Airport, which handles over 50 million passengers per year, an extensive motorway network, and a high-speed rail line with a link to France and the rest of Europe."
+        ],
+        "imageURL":[
+            "http://localhost:3000/images/bc5.jpg",
+            "http://localhost:3000/images/bc3.jpg",
+            "http://localhost:3000/images/bc2.jpg",
+            "http://localhost:3000/images/bc1.jpg",
+            "http://localhost:3000/images/bc6.jpg",
+            "http://localhost:3000/images/bc4.jpg"
+        ]
+    },
+    {
+        "name" : "London",
+        "country":"England",
+        "text":[
+            "London is the capital and largest city of England and the United Kingdom. The city stands on the River Thames in the south-east of England, at the head of its 50-mile (80 km) estuary leading to the North Sea. London has been a major settlement for two millennia. Londinium was founded by the Romans. The City of London, London's ancient core and financial centre − an area of just 1.12 square miles (2.9 km2) and colloquially known as the Square Mile − retains boundaries that closely follow its medieval limits. The adjacent City of Westminster has for centuries been the location of much of the national government. Thirty-one additional boroughs north and south of the river also comprise modern London. The London region is governed by the mayor of London and the London Assembly.",
+        "London is one of the world's most important global cities. It exerts a considerable impact upon the arts, commerce, education, entertainment, fashion, finance, healthcare, media, professional services, research and development, tourism and transportation. It is one of the largest financial centres in the world and in 2019, London had the second highest number of ultra high-net-worth individuals in Europe, after Paris. And in 2020, London had the second-highest number of billionaires of any city in Europe, after Moscow.London's universities form the largest concentration of higher education institutes in Europe, and London is home to highly ranked institutions such as Imperial College London in natural and applied sciences, the London School of Economics in social sciences, and the comprehensive University College London. In 2012, London became the first city to have hosted three modern Summer Olympic Games.",
+        "London has a diverse range of people and cultures, and more than 300 languages are spoken in the region. Its estimated mid-2018 municipal population (corresponding to Greater London) was roughly 9 million, which made it the third-most populous city in Europe. London accounts for 13.4% of the U.K. population. Greater London Built-up Area is the fourth-most populous in Europe, after Istanbul, Moscow, and Paris, with 9,787,426 inhabitants at the 2011 census. The London metropolitan area is the third-most populous in Europe, after Istanbul and the Moscow Metropolitan Area, with 14,040,163 inhabitants in 2016.",
+        "London contains four World Heritage Sites: the Tower of London; Kew Gardens; the site comprising the Palace of Westminster, Westminster Abbey, and St Margaret's Church; and the historic settlement in Greenwich where the Royal Observatory, Greenwich defines the Prime Meridian (0° longitude) and Greenwich Mean Time. Other landmarks include Buckingham Palace, the London Eye, Piccadilly Circus, St Paul's Cathedral, Tower Bridge, Trafalgar Square and The Shard. London has numerous museums, galleries, libraries and sporting events. These include the British Museum, National Gallery, Natural History Museum, Tate Modern, British Library and West End theatres. The London Underground is the oldest underground railway network in the world."
+        ],
+        "imageURL":[
+            "http://localhost:3000/images/lon3.jpg",
+            "http://localhost:3000/images/lon5.jpg",
+            "http://localhost:3000/images/lon2.jpg",
+            "http://localhost:3000/images/lon1.jpg",
+            "http://localhost:3000/images/lon6.jpg",
+            "http://localhost:3000/images/lon4.jpg"
+        ]
+    },
+    {
+        "name" : "NYC, New-York",
+        "country":"USA",
+        "text":[
+        "New York City (NYC), often called simply New York, is the most populous city in the United States. With an estimated 2019 population of 8,336,817 distributed over about 302.6 square miles (784 km2), New York City is also the most densely populated major city in the United States. Located at the southern tip of the State of New York, the city is the center of the New York metropolitan area, the largest metropolitan area in the world by urban landmass. With almost 20 million people in its metropolitan statistical area and approximately 23 million in its combined statistical area, it is one of the world's most populous megacities. New York City has been described as the cultural, financial, and media capital of the world, significantly influencing commerce, entertainment, research, technology, education, politics, tourism, art, fashion, and sports. Home to the headquarters of the United Nations, New York is an important center for international diplomacy.",
+        "Situated on one of the world's largest natural harbors, New York City is composed of five boroughs, each of which is a county of the State of New York. The five boroughs—Brooklyn, Queens, Manhattan, the Bronx, and Staten Island—were created when local governments were consolidated into a single city in 1898. The city and its metropolitan area constitute the premier gateway for legal immigration to the United States. As many as 800 languages are spoken in New York, making it the most linguistically diverse city in the world. New York is home to more than 3.2 million residents born outside the United States, the largest foreign-born population of any city in the world as of 2016. As of 2019, the New York metropolitan area is estimated to produce a gross metropolitan product (GMP) of $2.0 trillion. If the New York metropolitan area were a sovereign state, it would have the eighth-largest economy in the world. New York is home to the highest number of billionaires of any city in the world.",
+        "New York City traces its origins to a trading post founded by colonists from the Dutch Republic in 1624 on Lower Manhattan; the post was named New Amsterdam in 1626. The city and its surroundings came under English control in 1664 and were renamed New York after King Charles II of England granted the lands to his brother, the Duke of York. The city was regained by the Dutch in July 1673 and was subsequently renamed New Orange for one year and three months; the city has been continuously named New York since November 1674. New York City was the capital of the United States from 1785 until 1790, and has been the largest U.S. city since 1790. The Statue of Liberty greeted millions of immigrants as they came to the U.S. by ship in the late 19th and early 20th centuries, and is a symbol of the U.S. and its ideals of liberty and peace. In the 21st century, New York has emerged as a global node of creativity, entrepreneurship, and environmental sustainability, and as a symbol of freedom and cultural diversity. In 2019, New York was voted the greatest city in the world per a survey of over 30,000 people from 48 cities worldwide, citing its cultural diversity.",
+        "Many districts and landmarks in New York City are well known, including three of the world's ten most visited tourist attractions in 2013. A record 62.8 million tourists visited New York City in 2017. Times Square is the brightly illuminated hub of the Broadway Theater District, one of the world's busiest pedestrian intersections, and a major center of the world's entertainment industry. Many of the city's landmarks, skyscrapers, and parks are known around the world. Manhattan's real estate market is among the most expensive in the world. Providing continuous 24/7 service and contributing to the nickname The City that Never Sleeps, the New York City Subway is the largest single-operator rapid transit system worldwide, with 472 rail stations. The city has over 120 colleges and universities, including Columbia University, New York University, Rockefeller University, and the City University of New York system, which is the largest urban public university system in the United States. Anchored by Wall Street in the Financial District of Lower Manhattan, New York City has been called both the world's leading financial center and the most financially powerful city in the world, and is home to the world's two largest stock exchanges by total market capitalization, the New York Stock Exchange and NASDAQ."
+        ],
+        "imageURL":[
+            "http://localhost:3000/images/ny3.jpg",
+            "http://localhost:3000/images/ny5.jpg",
+            "http://localhost:3000/images/ny2.jpg",
+            "http://localhost:3000/images/ny1.jpg",
+            "http://localhost:3000/images/ny6.jpg",
+            "http://localhost:3000/images/ny4.jpg"
+        ]
+    },
+    {
+        "name" : "San-Francisco, California",
+        "country":"USA",
+        "text":[
+            "San Francisco, officially the City and County of San Francisco, is a cultural, commercial, and financial center of Northern California. San Francisco is the 16th most populous city in the United States, and the fourth most populous in California, with 881,549 residents as of 2019. It covers an area of about 46.89 square miles (121.4 km2), mostly at the north end of the San Francisco Peninsula in the San Francisco Bay Area, making it the second most densely populated large U.S. city, and the fifth most densely populated U.S. county, behind only four of the five New York City boroughs. San Francisco is part of the 12th-largest metropolitan statistical area in the United States by population, with 4.7 million people, and the fourth-largest by economic output, with GDP of $592 billion in 2019. With San Jose, it forms the fifth most populous combined statistical area in the United States, with 9.67 million residents as of 2019. Colloquial nicknames for San Francisco include The City, SF, Frisco and San Fran.",
+        "As of 2020, San Francisco has the highest salaries, disposable income, and median home prices in the world at $1.7 million, as well as the highest median rents. In 2019, San Francisco was the seventh-highest-income county in the United States, with a per capita personal income of $139,405. In the same year, San Francisco proper had a GDP of $203.5 billion, and a GDP per capita of $230,829. The CSA San Francisco shares with San Jose and Oakland was the country's third-largest urban economy as of 2019, with a GDP of $1.09 trillion. Of the 105 primary statistical areas in the U.S. with over 0.5 million residents, this CSA had the highest GDP per capita in 2019, at $112,348. San Francisco was ranked 8th in the world and 2nd in the United States on the Global Financial Centres Index as of September 2020.",
+        "San Francisco was founded on June 29, 1776, when colonists from Spain established the Presidio of San Francisco at the Golden Gate and Mission San Francisco de Asís a few miles away, both named for Francis of Assisi. The California Gold Rush of 1849 brought rapid growth, making it the largest city on the West Coast at the time. San Francisco became a consolidated city-county in 1856. San Francisco's status as the West Coast's largest city peaked between 1870 and 1900, when around 25% of California's population resided in the city proper. After three-quarters of the city was destroyed by the 1906 earthquake and fire, San Francisco was quickly rebuilt, hosting the Panama-Pacific International Exposition nine years later. In World War II, San Francisco was a major port of embarkation for service members shipping out to the Pacific Theater. It then became the birthplace of the United Nations in 1945. After the war, the confluence of returning servicemen, significant immigration, liberalizing attitudes, along with the rise of the \"hippie\" counterculture, the Sexual Revolution, the Peace Movement growing from opposition to United States involvement in the Vietnam War, and other factors led to the Summer of Love and the gay rights movement, cementing San Francisco as a center of liberal activism in the United States. Politically, the city votes strongly along liberal Democratic Party lines.",
+        "A popular tourist destination, San Francisco is known for its cool summers, fog, steep rolling hills, eclectic mix of architecture, and landmarks, including the Golden Gate Bridge, cable cars, the former Alcatraz Federal Penitentiary, Fisherman's Wharf, and its Chinatown district. San Francisco is also the headquarters of five major banking institutions and various other companies such as Levi Strauss & Co., Gap Inc., Fitbit, Salesforce.com, Dropbox, Reddit, Square, Inc., Dolby, Airbnb, Pacific Gas and Electric Company, Yelp, Pinterest, Twitter, Uber, Lyft, Mozilla, Wikimedia Foundation and Craigslist. The city, and the surrounding Bay Area, is a global center of the sciences and arts and is home to a number of educational and cultural institutions, such as the University of California, San Francisco (UCSF), University of San Francisco (USF), San Francisco State University (SFSU), the de Young Museum, the San Francisco Museum of Modern Art, the SFJAZZ Center, and the California Academy of Sciences."
+        ],
+        "imageURL":[
+            "http://localhost:3000/images/sf3.jpg",
+            "http://localhost:3000/images/sf5.jpg",
+            "http://localhost:3000/images/sf2.jpg",
+            "http://localhost:3000/images/sf1.jpg",
+            "http://localhost:3000/images/sf6.jpg",
+            "http://localhost:3000/images/sf4.jpg"
+        ]
+    }
+]

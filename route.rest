@@ -28,7 +28,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/locations/60a2621cd80e912a2cd73a38
+DELETE http://localhost:3000/locations/60a6716093e4a35100e63fa2
 
 ###
 

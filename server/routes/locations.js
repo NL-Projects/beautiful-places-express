@@ -2,6 +2,15 @@ const express = require("express");
 const router = express.Router();
 const Location = require("../models/location");
 
+// Init locations db
+(async () => {
+  try {
+    const locations = require("../public/sites/data.json");
+    await Location.insertMany(locations);
+  } catch (err) {
+    console.log(err.message);
+  }
+})();
 // Get all
 router.get("/", async (req, res) => {
   try {
