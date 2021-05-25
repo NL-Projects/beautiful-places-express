@@ -36,8 +36,8 @@ a.active {
 img {
   border-radius: 2%;
   margin: 20px 20px;
-  width:25%;
-  height:25%;
+  width: 45%;
+  height: 45%;
 }
 
 .subtitle {
@@ -46,14 +46,18 @@ img {
   color: #333;
 }
 
-.info_text {
+#container {
   font-size: 20px;
+  text-align: center;
   line-height: 1.6;
   font-weight: 400;
   color: #333;
-  width: 800px;
   margin: auto;
   width: 60%;
+}
+
+#container p {
+  text-align: justify;
 }
 
 .floatRightClear {

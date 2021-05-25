@@ -26,30 +26,34 @@ async function renderLocation(e) {
     locationReference[e.srcElement.innerHTML]
   );
   let resultDiv = document.createElement("div");
-  for (var i = 0; i < location.imageURL.length; i++) {
+  for (var i = 0; i < location.text.length; i++) {
     let p;
-    if (i % 2 == 0) {
-      p = document.createElement("p");
-      let text = document.createTextNode(location.text[i / 2]);
-      p.appendChild(text);
-    }
+    p = document.createElement("p");
+    let text = document.createTextNode(location.text[i]);
+    p.appendChild(text);
     resultDiv.appendChild(document.createElement("br"));
-    let img1 = document.createElement("img");
-    img1.src = location.imageURL[i];
-    img1.classList.add("floatRight");
-    let img2 = document.createElement("img");
-    img2.src = location.imageURL[i + 1];
-    img2.classList.add("floatRight");
-    resultDiv.append(p, img1, img2);
+    resultDiv.appendChild(p);
+    if (location.imageURL[2 * i] != null) {
+      let imgContainer = document.createElement("div");
+      imgContainer.classList.add(".img_container");
+      let img1 = document.createElement("img");
+      img1.src = location.imageURL[2 * i];
+      img1.classList.add("floatRight");
+      let img2 = document.createElement("img");
+      img2.src = location.imageURL[2 * i + 1];
+      img2.classList.add("floatRight");
+      imgContainer.append(img1, img2);
+      resultDiv.appendChild(imgContainer);
+    }
   }
   document.getElementById("container").innerHTML = resultDiv.innerHTML;
 }
+
 async function getLocationById(id) {
-  let location = await axios
+  return await axios
     .get("http://localhost:3000/locations/" + id)
     .then((res) => {
       return res.data;
     })
     .catch((err) => console.log(err));
-  return location;
 }
