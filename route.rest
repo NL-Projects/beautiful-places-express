@@ -2,7 +2,7 @@ GET http://localhost:3000/locations
 
 ###
 
-GET http://localhost:3000/locations/60a2621cd80e912a2cd73a38
+GET http://localhost:3000/locations/60ac3fe986b3353050e5ac95
 
 ###
 
