@@ -103,6 +103,9 @@ textarea {
   background-color: rgb(68, 68, 68);
   color:white;
 }
+#upload-images { 
+  display: inline-flex;
+}
 #addbutton {
   border-radius: 4px;
   position: fixed;

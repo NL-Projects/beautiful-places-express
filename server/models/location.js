@@ -3,6 +3,7 @@ const locationSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
+    unique:true
   },
   country: String,
   text: [String],
