@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>5 Most Beautiful Places</title>
-    <link rel="icon" href="./images/globe_terrestre.ico">
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='stylesheet' type='text/css' media='screen' href='./css/styles.css'>
+    <link rel="icon" href="./images/globe_terrestre.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/styles.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-    <script src='./js/main.js'></script>
-</head>
-<body class="body">
+    <script src="./js/main.js"></script>
+  </head>
+  <body class="body">
     <div id="topnav">
-        <a class="active" href="#home">Home</a>
+      <a class="active" href="#home">Home</a>
     </div>
-    <h1 class="subtitle">5 Most Beautiful Places</h1>
+    <h1 class="subtitle">Most Beautiful Places I Know</h1>
     <div id="container"></div>
-
-</body>
+    <div hidden id="addlocation">
+        <h2>Add a new location</h2>
+      <form action="http://localhost:3000/locations" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+        <label for="country">Country</label>
+        <input type="text" name="country" id="country" />
+        <label for id="text">Text</label>
+        <textarea name="text" id="text" cols="30" rows="10"></textarea>
+        <label>Upload images</label>
+        <input type="file" class="file-input" />
+        <input type="file" class="file-input"/>
+        <input type="submit"></input>
+      </form>
+    </div>
+    <button id="addbutton" onclick="showForm()">Add</button>
+  </body>
 </html>

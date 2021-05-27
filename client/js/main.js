@@ -2,8 +2,8 @@ window.onload = getExistingLocations;
 
 var locationReference = {};
 
-function getExistingLocations() {
-  axios
+async function getExistingLocations() {
+  await axios
     .get("http://localhost:3000/locations")
     .then((res) => {
       var topNav = document.getElementById("topnav");
@@ -22,6 +22,8 @@ function getExistingLocations() {
 }
 
 async function renderLocation(e) {
+  document.getElementById("addlocation").style.display = "none";
+  document.getElementById("container").style.display = "block";
   let location = await getLocationById(
     locationReference[e.srcElement.innerHTML]
   );
@@ -56,4 +58,8 @@ async function getLocationById(id) {
       return res.data;
     })
     .catch((err) => console.log(err));
+}
+function showForm() {
+  document.getElementById("addlocation").style.display = "block";
+  document.getElementById("container").style.display = "none";
 }
