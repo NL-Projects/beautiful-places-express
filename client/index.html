@@ -34,8 +34,7 @@
         <textarea name="text" id="textarea" cols="30" rows="10"></textarea>
         <label>Upload images</label>
         <div id="upload-images">
-            <input name="images" type="file" form="sub-form" multiple/>
-            <input value="Upload" type="submit" form="sub-form"/>
+            <input name="images" oninput="handleUploadedImages()"type="file" form="sub-form" multiple/>
         </div>
         <input type="submit"></input>
     </div>

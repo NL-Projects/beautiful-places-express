@@ -25,8 +25,6 @@ app.use(cors());
 app.use(express.static("public"));
 app.use("/images", express.static("images"));
 
-
-
 // Locations router
 const locationsRouter = require("./routes/locations");
 app.use("/locations", locationsRouter);
@@ -43,10 +41,12 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage });
 
-app.post("/upload", upload.array("images",2), (req, res, next) => {
-  console.log(req.files);
-  return false;
-  // return res.json({message:req.file.path})
+app.post("/upload", upload.array("images", 2), (req, res, next) => {
+  var names = [];
+  for (var i = 0; i < req.files.length; i++) {
+    names.push(req.files[i].filename);
+  }
+  res.send(names)
 });
 
 // Server start

@@ -59,6 +59,20 @@ async function getLocationById(id) {
     })
     .catch((err) => console.log(err));
 }
+
+async function handleUploadedImages() {
+  var form = document.getElementById("sub-form");
+  var fd = new FormData(form);
+  let config = {
+    headers: {
+      "Content-Type" : "multipart/form-data"
+    }
+  }
+  var names = await axios.post("http://localhost:3000/upload",fd,config)
+  .then(res=>console.log(res))
+  .catch(err=>console.log(err));
+}
+
 function showForm() {
   document.getElementById("addlocation").style.display = "block";
   document.getElementById("container").style.display = "none";
