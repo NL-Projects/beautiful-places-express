@@ -50,7 +50,7 @@ router.patch("/:id", getLocation, async (req, res) => {
   if (req.body.country != null) {
     res.location.country = req.body.country;
   }
-  if (req.body.name != null) {
+  if (req.body.imageURL != null) {
     res.location.imageURL = req.body.imageURL;
   }
   try {

@@ -23,20 +23,20 @@
     <div id="container"></div>
     <div hidden id="addlocation">
         <h2>Add a new location</h2>
-        <form  id="main-form" action="http://localhost:3000/locations" method="POST" enctype="application/x-www-form-urlencoded"></form>
+        <form  id="main-form" onsubmit="handleUploadedImages()" action="http://localhost:3000/locations" method="POST" enctype="application/x-www-form-urlencoded"></form>
         <form id="sub-form" action="http://localhost:3000/upload" method="POST" enctype="multipart/form-data"></form>
 
         <label for="name">Name</label>
-        <input type="text" name="name" id="name"/ form="">
+        <input type="text" name="name" id="name" form="main-form">
         <label for="country">Country</label>
-        <input type="text" name="country" id="country" />
+        <input type="text" name="country" id="country" form="main-form" />
         <label for="text" id="textarea">Text</label>
-        <textarea name="text" id="textarea" cols="30" rows="10"></textarea>
+        <textarea name="text" id="textarea" cols="30" rows="10" form="main-form"></textarea>
         <label>Upload images</label>
         <div id="upload-images">
-            <input name="images" oninput="handleUploadedImages()"type="file" form="sub-form" multiple/>
+            <input name="images" form="sub-form" type="file" multiple/>
         </div>
-        <input type="submit"></input>
+        <input type="submit" form="main-form"></input>
     </div>
     <button id="addbutton" onclick="showForm()">Add</button>
   </body>

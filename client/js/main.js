@@ -68,7 +68,7 @@ async function handleUploadedImages() {
       "Content-Type" : "multipart/form-data"
     }
   }
-  var names = await axios.post("http://localhost:3000/upload",fd,config)
+  await axios.post("http://localhost:3000/upload",fd,config)
   .then(res=>console.log(res))
   .catch(err=>console.log(err));
 }
