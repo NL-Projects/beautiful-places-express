@@ -110,12 +110,24 @@ textarea {
   border-radius: 4px;
   position: fixed;
   font-size: 20px;
+  bottom: 75px;
+  right: 30px;
+  box-sizing: border-box;
+  padding: 12px 25px;
+  margin: 8px 0;
+}
+
+#deletebutton {
+  border-radius: 4px;
+  position: fixed;
+  font-size: 20px;
   bottom: 8px;
   right: 30px;
   box-sizing: border-box;
   padding: 12px 25px;
   margin: 8px 0;
 }
+
 
 .floatRightClear {
   float: right;

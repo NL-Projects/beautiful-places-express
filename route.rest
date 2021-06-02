@@ -2,7 +2,7 @@ GET http://localhost:3000/locations
 
 ###
 
-GET http://localhost:3000/locations/60ac3fe986b3353050e5ac95
+GET http://localhost:3000/locations/60b789a9ac740f3ff45ee013
 
 ###
 
@@ -28,7 +28,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/locations/60a6716093e4a35100e63fa2
+DELETE http://localhost:3000/locations/60b789a9ac740f3ff45ee013
 
 ###
 

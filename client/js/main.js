@@ -1,6 +1,7 @@
 window.onload = getExistingLocations;
 
 var locationReference = {};
+var locs = [];
 
 async function getExistingLocations() {
   await axios
@@ -24,6 +25,7 @@ async function getExistingLocations() {
 async function renderLocation(e) {
   document.getElementById("addlocation").style.display = "none";
   document.getElementById("container").style.display = "block";
+  document.getElementById("removelocation").style.display = "none";
   let location = await getLocationById(
     locationReference[e.srcElement.innerHTML]
   );
@@ -74,6 +76,7 @@ async function handleUploadedImages() {
     .post("http://localhost:3000/upload", fd, config)
     .then((res) => {
       imageURL = res.data;
+      console.log(res.data);
     })
     .catch((err) => console.log(err));
   await axios.patch(
@@ -85,4 +88,34 @@ async function handleUploadedImages() {
 function showForm() {
   document.getElementById("addlocation").style.display = "block";
   document.getElementById("container").style.display = "none";
+  document.getElementById("removelocation").style.display = "none";
+}
+
+//show the delete box - its not a box as well as it not a form
+function deletebox() {
+  document.getElementById("addlocation").style.display = "none";
+  document.getElementById("removelocation").style.display = "block";
+  document.getElementById("container").style.display = "none";
+
+  let selectMenu = document.getElementById("location-select");
+  for (var key in locationReference) {
+    let opt = document.createElement("option");
+    opt.value = key;
+    opt.innerHTML = key;
+    selectMenu.appendChild(opt);
+  }
+}
+
+//only a test for get method
+function removeLocation() {
+  let locationToDelete = document.getElementById("location-select").value;
+  axios
+    .delete(
+      "http://localhost:3000/locations/" + locationReference[locationToDelete]
+    )
+    .then((res) => {
+      console.log(res);
+      document.getElementById("container").innerHTML = `<h1>${res}</h1>`;
+    })
+    .catch((err) => console.log(err));
 }
