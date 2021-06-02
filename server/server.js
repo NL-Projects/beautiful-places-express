@@ -42,11 +42,11 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 
 app.post("/upload", upload.array("images", 2), (req, res, next) => {
-  var names = [];
+  var imageURL = [];
   for (var i = 0; i < req.files.length; i++) {
-    names.push(req.files[i].filename);
+    imageURL.push("http://localhost:3000/images/"+req.files[i].filename);
   }
-  res.send(names)
+  res.send(imageURL)
 });
 
 // Server start

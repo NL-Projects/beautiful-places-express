@@ -61,16 +61,25 @@ async function getLocationById(id) {
 }
 
 async function handleUploadedImages() {
+  let newLocationName = document.getElementById("name").value;
   var form = document.getElementById("sub-form");
   var fd = new FormData(form);
   let config = {
     headers: {
-      "Content-Type" : "multipart/form-data"
-    }
-  }
-  await axios.post("http://localhost:3000/upload",fd,config)
-  .then(res=>console.log(res))
-  .catch(err=>console.log(err));
+      "Content-Type": "multipart/form-data",
+    },
+  };
+  var imageURL = [];
+  await axios
+    .post("http://localhost:3000/upload", fd, config)
+    .then((res) => {
+      imageURL = res.data;
+    })
+    .catch((err) => console.log(err));
+  await axios.patch(
+    "http://localhost:3000/locations/" + locationReference[newLocationName],
+    { imageURL: imageURL }
+  );
 }
 
 function showForm() {
