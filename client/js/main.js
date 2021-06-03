@@ -62,36 +62,57 @@ async function getLocationById(id) {
     .catch((err) => console.log(err));
 }
 
-async function handleUploadedImages() {
-  let newLocationName = document.getElementById("name").value;
-  var form = document.getElementById("sub-form");
-  var fd = new FormData(form);
-  let config = {
-    headers: {
-      "Content-Type": "multipart/form-data",
-    },
-  };
-  var imageURL = [];
+async function submitForms() {
+  let mainForm = document.getElementById("main-form");
+  let mainFormData = new FormData(mainForm);
+  let newLocationName = mainForm.elements.name.value;
+  let subForm = document.getElementById("sub-form");
+
+  let formObj = {};
+  for (let [key, val] of mainFormData) {
+    formObj[key] = val;
+  }
+  console.log(formObj);
   await axios
-    .post("http://localhost:3000/upload", fd, config)
+    .post("http://localhost:3000/locations", JSON.stringify(formObj), {
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    .then((res) => console.log(res))
+    .catch((err) => console.log(err));
+
+  //upload images and get urls
+  let imageURL = await axios
+    .post("http://localhost:3000/upload", new FormData(subForm), {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    })
     .then((res) => {
-      imageURL = res.data;
-      console.log(res.data);
+      return res.data;
     })
     .catch((err) => console.log(err));
-  await axios.patch(
-    "http://localhost:3000/locations/" + locationReference[newLocationName],
-    { imageURL: imageURL }
-  );
+    console.log("uploaded");
+  patchImageUrl(newLocationName, imageURL);
 }
-
+async function patchImageUrl(locationName, imageURL) {
+  alert(locationReference[locationName]);
+  await axios
+    .patch(
+      "http://localhost:3000/locations/" + locationReference[locationName],
+      { imageURL: imageURL }
+    )
+    .then(() => console.log("Patched!!"))
+    .catch((err) => console.log(err));
+}
 function showForm() {
   document.getElementById("addlocation").style.display = "block";
   document.getElementById("container").style.display = "none";
   document.getElementById("removelocation").style.display = "none";
 }
 
-//show the delete box - its not a box as well as it not a form
+//show the delete box
 function deletebox() {
   document.getElementById("addlocation").style.display = "none";
   document.getElementById("removelocation").style.display = "block";
@@ -106,7 +127,6 @@ function deletebox() {
   }
 }
 
-//only a test for get method
 function removeLocation() {
   let locationToDelete = document.getElementById("location-select").value;
   axios
@@ -114,8 +134,8 @@ function removeLocation() {
       "http://localhost:3000/locations/" + locationReference[locationToDelete]
     )
     .then((res) => {
-      console.log(res);
-      document.getElementById("container").innerHTML = `<h1>${res}</h1>`;
+      alert(res.data.message);
+      window.location.reload();
     })
     .catch((err) => console.log(err));
 }

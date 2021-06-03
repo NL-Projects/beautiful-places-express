@@ -2,7 +2,7 @@ GET http://localhost:3000/locations
 
 ###
 
-GET http://localhost:3000/locations/60b789a9ac740f3ff45ee013
+GET http://localhost:3000/locations/60b8f02280f0163c70d89396
 
 ###
 
@@ -18,11 +18,11 @@ Content-Type: application/json
 
 ###
 
-PATCH http://localhost:3000/locations/60a4d022d8f5c644b80cd6e5
+PATCH http://localhost:3000/locations/60b8f604217ece36b05fdb5a
 Content-Type: application/json
 
 {
-    "name":"test2",
+    "name":"test3",
     "imageURL" : ["img1","img2"]
 }
 

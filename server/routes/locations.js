@@ -34,7 +34,6 @@ router.post("/", async (req, res) => {
   });
   try {
     const newLocation = await location.save();
-    res.status(201).json(newLocation);
   } catch (err) {
     res.status(400).json({ message: err.message });
   }
@@ -55,7 +54,6 @@ router.patch("/:id", getLocation, async (req, res) => {
   }
   try {
     const updatedLocation = await res.location.save();
-    res.json(updatedLocation);
   } catch (err) {
     res.status(400).json({ message: err.message });
   }

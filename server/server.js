@@ -16,6 +16,7 @@ db.on("error", (error) => console.log(error));
 db.once("open", () => console.log("Connected to database"));
 
 // Handling JSON
+app.use(express.json());
 app.use(express.urlencoded());
 
 // Cross-origin resource sharing
@@ -44,9 +45,9 @@ var upload = multer({ storage: storage });
 app.post("/upload", upload.array("images", 2), (req, res, next) => {
   var imageURL = [];
   for (var i = 0; i < req.files.length; i++) {
-    imageURL.push("http://localhost:3000/images/"+req.files[i].filename);
+    imageURL.push("http://localhost:3000/images/" + req.files[i].filename);
   }
-  res.send(imageURL)
+  res.send(imageURL);
 });
 
 // Server start
