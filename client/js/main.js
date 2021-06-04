@@ -1,7 +1,6 @@
 window.onload = getExistingLocations;
 
 var locationReference = {};
-var locs = [];
 
 async function getExistingLocations() {
   await axios
@@ -23,16 +22,24 @@ async function getExistingLocations() {
 }
 
 async function renderLocation(e) {
+  let name = e.srcElement.innerHTML;
+  let activeElement = document.querySelector(".active");
+  activeElement.classList.remove("active");
+  document.querySelectorAll("#topnav a").forEach((link) => {
+    if (link.innerText == name) {
+      link.classList.add("active");
+    }
+  });
   document.getElementById("addlocation").style.display = "none";
   document.getElementById("container").style.display = "block";
   document.getElementById("removelocation").style.display = "none";
-  let location = await getLocationById(
-    locationReference[e.srcElement.innerHTML]
-  );
+  let location = await getLocationById(locationReference[name]);
   let resultDiv = document.createElement("div");
   for (var i = 0; i < location.text.length; i++) {
-    let p;
-    p = document.createElement("p");
+    let countryH2 = document.createElement("h2");
+    countryH2.innerHTML = location.country;
+    resultDiv.append(countryH2);
+    let p = document.createElement("p");
     let text = document.createTextNode(location.text[i]);
     p.appendChild(text);
     resultDiv.appendChild(document.createElement("br"));
@@ -56,9 +63,7 @@ async function renderLocation(e) {
 async function getLocationById(id) {
   return axios
     .get("http://localhost:3000/locations/" + id)
-    .then((res) => {
-      return res.data;
-    })
+    .then((res) => res.data)
     .catch((err) => console.log(err));
 }
 async function SubmitAndGetLocationId() {
