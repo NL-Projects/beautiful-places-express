@@ -23,8 +23,13 @@ async function getExistingLocations() {
 
 async function renderLocation(e) {
   let name = e.srcElement.innerHTML;
-  let activeElement = document.querySelector(".active");
-  activeElement.classList.remove("active");
+  try {
+    let activeElement = document.querySelector(".active");
+    activeElement.classList.remove("active");
+  } catch (error) {
+    console.log(error.message);
+  }
+
   document.querySelectorAll("#topnav a").forEach((link) => {
     if (link.innerText == name) {
       link.classList.add("active");
@@ -35,10 +40,10 @@ async function renderLocation(e) {
   document.getElementById("removelocation").style.display = "none";
   let location = await getLocationById(locationReference[name]);
   let resultDiv = document.createElement("div");
+  let countryH2 = document.createElement("h2");
+  countryH2.innerHTML = location.country;
+  resultDiv.append(countryH2);
   for (var i = 0; i < location.text.length; i++) {
-    let countryH2 = document.createElement("h2");
-    countryH2.innerHTML = location.country;
-    resultDiv.append(countryH2);
     let p = document.createElement("p");
     let text = document.createTextNode(location.text[i]);
     p.appendChild(text);
@@ -139,4 +144,18 @@ function removeLocation() {
       window.location.reload();
     })
     .catch((err) => console.log(err));
+}
+
+function removeAllLocations() {
+  if (confirm("Are you sure?")) {
+    axios
+      .delete("http://localhost:3000/locations")
+      .then((res) => {
+        alert(res.data.message);
+        window.location.reload();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }
 }

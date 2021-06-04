@@ -43,9 +43,10 @@
       <select name="locations" id="location-select">
         <!-- will be filled with js -->
       </select>
-      <button onclick="removeLocation()">Delete!</button>
+      <button class="danger-btn"onclick="removeLocation()">Delete!</button>
+      <button class="danger-btn" onclick="removeAllLocations()">Remove All Locations</button>
     </div>
-    <button id="addbutton" onclick="showForm()">Add</button>
-    <button id="deletebutton" onclick="deletebox()">Delete</button>
+    <button id="addbutton" class="action-btn" onclick="showForm()">Add</button>
+    <button id="bottom-delete-btn" class="danger-btn" onclick="deletebox()">Delete</button>
   </body>
 </html>
