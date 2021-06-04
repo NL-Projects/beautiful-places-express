@@ -54,56 +54,52 @@ async function renderLocation(e) {
 }
 
 async function getLocationById(id) {
-  return await axios
+  return axios
     .get("http://localhost:3000/locations/" + id)
     .then((res) => {
       return res.data;
     })
     .catch((err) => console.log(err));
 }
-
-async function submitForms() {
+async function SubmitAndGetLocationId() {
   let mainForm = document.getElementById("main-form");
-  let mainFormData = new FormData(mainForm);
-  let newLocationName = mainForm.elements.name.value;
-  let subForm = document.getElementById("sub-form");
 
   let formObj = {};
-  for (let [key, val] of mainFormData) {
+  for (let [key, val] of new FormData(mainForm)) {
     formObj[key] = val;
   }
-  console.log(formObj);
-  await axios
+  return axios
     .post("http://localhost:3000/locations", JSON.stringify(formObj), {
       headers: {
         "Content-Type": "application/json",
       },
     })
-    .then((res) => console.log(res))
+    .then((res) => res.data._id)
     .catch((err) => console.log(err));
-
-  //upload images and get urls
-  let imageURL = await axios
+}
+async function SubmitImgAndGetURL() {
+  let subForm = document.getElementById("sub-form");
+  return axios
     .post("http://localhost:3000/upload", new FormData(subForm), {
       headers: {
         "Content-Type": "multipart/form-data",
       },
     })
-    .then((res) => {
-      return res.data;
-    })
+    .then((res) => res.data)
     .catch((err) => console.log(err));
-    console.log("uploaded");
-  patchImageUrl(newLocationName, imageURL);
 }
-async function patchImageUrl(locationName, imageURL) {
-  alert(locationReference[locationName]);
+async function submitForms() {
+  let newLocationId = await SubmitAndGetLocationId();
+  let imageURL = await SubmitImgAndGetURL();
+
+  patchImageUrl(newLocationId, imageURL);
+}
+async function patchImageUrl(locationId, imageURL) {
   await axios
-    .patch(
-      "http://localhost:3000/locations/" + locationReference[locationName],
-      { imageURL: imageURL }
-    )
-    .then(() => console.log("Patched!!"))
+    .patch("http://localhost:3000/locations/" + locationId, {
+      imageURL: imageURL,
+    })
+    .then((res) => console.log(res))
     .catch((err) => console.log(err));
 }
 function showForm() {
