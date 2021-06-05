@@ -41,6 +41,7 @@ async function renderLocation(e) {
   let location = await getLocationById(locationReference[name]);
   let resultDiv = document.createElement("div");
   let countryH2 = document.createElement("h2");
+  countryH2.classList.add(".subtitle");
   countryH2.innerHTML = location.country;
   resultDiv.append(countryH2);
   for (var i = 0; i < location.text.length; i++) {

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>5 Most Beautiful Places</title>
+    <title>Beautiful Places Express</title>
     <link rel="icon" href="./images/globe_terrestre.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -17,36 +17,63 @@
   </head>
   <body class="body">
     <div id="topnav">
-      <a class="active" href="#home">Home</a>
+     <div><img id="logo" src="./static/logo.png" alt="logo" /></div> 
     </div>
-    <h1 class="subtitle">Most Beautiful Places I Know</h1>
-    <div id="container"></div>
-    <div hidden id="addlocation">
-        <h2>Add a new location</h2>
-        <form name="main-form" id="main-form"></form>
-        <form id="sub-form" action="http://localhost:3000/upload" method="POST" enctype="multipart/form-data"></form>
-        <label id="name">Name</label>
-        <input type="text" name="name" id="name" form="main-form"/>
-        <label for="country">Country</label>
-        <input type="text" name="country" id="country" form="main-form" />
-        <label for="text" id="textarea">Text</label>
-        <textarea name="text" id="textarea" cols="30" rows="10" form="main-form"></textarea>
-        <label>Upload images</label>
-        <div id="upload-images">
-            <input name="images" form="sub-form" type="file" multiple/>
-        </div>
-        <button onclick=submitForms()>Submit</button>
+    <div class="box-container" id="container"></div>
+    <div class="box-container" hidden id="addlocation">
+      <h2>Add a new location</h2>
+      <form name="main-form" id="main-form"></form>
+      <form
+        id="sub-form"
+        action="http://localhost:3000/upload"
+        method="POST"
+        enctype="multipart/form-data"
+      ></form>
+      <label id="name">Name</label>
+      <input
+        placeholder="Ex. Amsterdam"
+        type="text"
+        name="name"
+        id="name"
+        form="main-form"
+      />
+      <label for="country">Country</label>
+      <input
+        placeholder="Ex. Netherlands"
+        type="text"
+        name="country"
+        id="country"
+        form="main-form"
+      />
+      <label for="text" id="textarea">Text</label>
+      <textarea
+        placeholder="Tell us something about the location..."
+        name="text"
+        id="textarea"
+        cols="30"
+        rows="10"
+        form="main-form"
+      ></textarea>
+      <label>Upload images</label>
+      <div id="upload-images">
+        <input name="images" form="sub-form" type="file" multiple />
+      </div>
+      <button onclick="submitForms()">Submit</button>
     </div>
     <!-- same as addlocation - for remove -->
-    <div hidden id="removelocation">
+    <div class="box-container" hidden id="removelocation">
       <h2>Choose a location to delete:</h2>
       <select name="locations" id="location-select">
         <!-- will be filled with js -->
       </select>
-      <button class="danger-btn"onclick="removeLocation()">Delete!</button>
-      <button class="danger-btn" onclick="removeAllLocations()">Remove All Locations</button>
+      <button class="danger-btn" onclick="removeLocation()">Delete!</button>
+      <button class="danger-btn" onclick="removeAllLocations()">
+        Remove All Locations
+      </button>
     </div>
     <button id="addbutton" class="action-btn" onclick="showForm()">Add</button>
-    <button id="bottom-delete-btn" class="danger-btn" onclick="deletebox()">Delete</button>
+    <button id="bottom-delete-btn" class="danger-btn" onclick="deletebox()">
+      Delete
+    </button>
   </body>
 </html>
